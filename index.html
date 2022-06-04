@@ -5,8 +5,9 @@
 
     <style>
         .container {
-  width: 1000px;
+  width: 100%;
   clear: both;
+  position:relative;
 }
 
 .container input {
@@ -84,7 +85,8 @@ input { display: table-cell; }
                 <h1 style="text-align: center;">My Pediatric Cardiology Patient Passport</h1>
       
                 <h3>Who I am:</h3>
-                <button onclick="window.print()">Download Page!</button>
+                <button onclick="window.print()">Download My Medical Passport!</button>
+                <input type="button" value="Save" onClick="saveData()" />
                 <br />
                 <label for="fname">Patient Name:</label><br />
                 <input type="text" id="fname" name="fname" required/><br />
@@ -254,10 +256,10 @@ input { display: table-cell; }
                 <div class="preview2">
                     <img id="file-ip-1-preview2" />
                 </div>
-
-                <button onclick="window.print()">Download Page!</button>
+                 <input type="button" value="Save" onClick="saveData()" />
+                <button onclick="window.print()">Download My Medical Passport!</button>
             </form>
-            <input type="button" value="Save" onClick="saveData()" />
+            
         </div>
     </body>
 </html>
