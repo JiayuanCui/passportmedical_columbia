@@ -1,0 +1,246 @@
+<html>
+    <head>
+        <title>My Passport</title>
+    </head>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type="submit"] {
+            background-color: #04aa6d;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+    <body>
+        <h1 style="text-align: center;">My Pediatric Cardiology Patient Passport</h1>
+        <div class="container-fluid">
+            <form action="submit">
+                <h3>Who I am:</h3>
+                <button onclick="window.print()">Download Page!</button>
+                <br />
+                <label for="fname">Patient Name:</label><br />
+                <input type="text" id="fname" name="fname" /><br />
+                <label for="dob">Date of Birth:</label><br />
+                <input type="date" id="dob" name="dob" />
+                <h3>My Cardiac History:</h3>
+                <label for="carDiag">Cardiac Diagnosis:</label><br />
+                <input type="text" id="carDiag" name="carDiag" /><br />
+                <label for="pastSur">Past Surgeries:</label><br />
+                <input type="text" id="pastSur" name="pastSur" /><br />
+                <label for="pastCat">Past Catheterizations:</label><br />
+                <input type="text" id="pastCat" name="pastCat" /><br />
+                <label for="impDev">Implanted Devices:</label>
+                <p>(ICD, Pacemaker, Valve, etc )</p>
+                <p>
+                    <br />
+                    <input type="text" id="impDev" name="impDev" />
+                </p>
+
+                <h3>Other Important Information:</h3>
+                <h4>Baseline Vital Signs</h4>
+                <li>
+                    <label for="oxy">Oxygen Saturation:</label><br />
+                    <input type="text" id="oxy" name="oxy" />
+                </li>
+
+                <li>
+                    <label for="resting">Resting Heart Rate:</label><br />
+                    <input type="text" id="resting" name="resting" />
+                </li>
+
+                <li>
+                    <label for="bp">Blood Pressure:</label>
+                    <input type="text" id="bp" name="bp" /><br />
+                    <br />
+                    <label for="carDiag">Cardiac Diagnosis:</label>
+                    <input type="text" id="carDiag" name="carDiag" /><br />
+                    <h4>Most Recent</h4>
+                </li>
+
+                <li>
+                    <label for="hemo">Hemoglobin/Hematocrit:</label>
+                    <input type="text" id="hemo" name="hemo" /><br />
+                </li>
+
+                <li>
+                    <label for="inr">Target INR (if on anticoagulants):</label>
+                    <input type="text" id="inr" name="inr" /><br />
+                </li>
+
+                <li>
+                    <label for="iep">Need for Infective Endocaditis:</label><br />
+                    <input type="radio" id="yes" name="iep" value="Yes" />Yes<br />
+                    <input type="radio" id="no" name="iep" value="No" />No<br />
+                    <label for="par">Physical Activity Restrictions:</label><br />
+                    <input type="text" id="par" name="par" /><br />
+                    <label for="genetic">Genetic Testing:(Special Instrcutions)</label><br />
+                    <input type="text" id="genetic" name="genetic" /><br />
+                </li>
+                <h3>My Medical History</h3>
+                <label for="mmi">Other Major Medical Issues:</label><br />
+                <input type="text" id="mmi" name="mmi" /><br />
+                <label for="cm">Current Medications:</label><br />
+                <input type="text" id="cm" name="cm" /><br />
+                <label for="aller">Allergies:</label><br />
+                <input type="text" id="aller" name="aller" /><br />
+                <h3>If you have any questions, please call:</h3>
+                <label for="mpc">My Pediatric Cardiologist:</label><br />
+                <input type="text" id="mpc" name="mpc" /><br />
+                <h3>Other Members of My Care Team:</h3>
+                <label for="mpp">My Primary Pediatrician:</label><br />
+                <input type="text" id="mpp" name="mpp" /><br />
+                <h3>My Contact Information:</h3>
+                <label for="mci">My Guardian:</label><br />
+                <input type="text" id="mci" name="mci" /><br />
+                <b> Directive</b>
+                <br />
+                <p>
+                    In case of emergency, if possible, please transport me to:
+                </p>
+                <br />
+                Columbia University Medical Center <br />
+                Morgan Stanley Children's Hospital <br />
+                3959 Broadway <br />
+                New York, NY 10032<br />
+                <script>
+                    function showPreview(event) {
+                        if (event.target.files.length > 0) {
+                            var src = URL.createObjectURL(event.target.files[0]);
+                            var preview = document.getElementById("file-ip-1-preview");
+                            preview.src = src;
+                            preview.style.display = "block";
+                        }
+                    }
+                    function showPreview2(event) {
+                        if (event.target.files.length > 0) {
+                            var src = URL.createObjectURL(event.target.files[0]);
+                            var preview = document.getElementById("file-ip-1-preview2");
+                            preview.src = src;
+                            preview.style.display = "block";
+                        }
+                    }
+                    function ko() {
+                        console.log("Preparing to Send...");
+                    }
+                    function saveData() {
+                        let name, email, psw;
+                        fname = document.getElementById("fname").value;
+                        dob = document.getElementById("dob").value;
+                        carDiag = document.getElementById("carDiag").value;
+                        pastSur = document.getElementById("pastSur").value;
+                        pastCat = document.getElementById("pastCat").value;
+                        impDev = document.getElementById("impDev").value;
+                        oxy = document.getElementById("oxy").value;
+                        resting = document.getElementById("resting").value;
+                        bp = document.getElementById("bp").value;
+                        hemo = document.getElementById("hemo").value;
+                        inr = document.getElementById("inr").value;
+                        iep = document.getElementById("yes").value;
+                        io = document.getElementById("no").value;
+                        par = document.getElementById("par").value;
+                        genetic = document.getElementById("genetic").value;
+                        mmi = document.getElementById("mmi").value;
+                        cm = document.getElementById("cm").value;
+                        aller = document.getElementById("aller").value;
+                        mpc = document.getElementById("mpc").value;
+                        mpp = document.getElementById("mpp").value;
+                        mci = document.getElementById("mci").value;
+
+                        localStorage.setItem("fname", fname);
+                        localStorage.setItem("dob", dob);
+                        localStorage.setItem("carDiag", carDiag);
+                        localStorage.setItem("pastSur", pastSur);
+                        localStorage.setItem("pastCat", pastCat);
+                        localStorage.setItem("impDev", impDev);
+                        localStorage.setItem("oxy", oxy);
+                        localStorage.setItem("resting", resting);
+                        localStorage.setItem("bp", bp);
+                        localStorage.setItem("hemo", hemo);
+                        localStorage.setItem("inr", inr);
+                        localStorage.setItem("iep", iep);
+                        localStorage.setItem("io", io);
+                        localStorage.setItem("par", par);
+                        localStorage.setItem("genetic", genetic);
+                        localStorage.setItem("mmi", mmi);
+                        localStorage.setItem("cm", cm);
+                        localStorage.setItem("aller", aller);
+                        localStorage.setItem("mpc", mpc);
+                        localStorage.setItem("mpp", mpp);
+                        localStorage.setItem("mci", mci);
+                    }
+                </script>
+                <h3>Cardiac Testing</h3>
+                <h5>Most Recent EKG:</h5>
+                <label for="file-ip-1">Upload Image</label>
+                <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);" />
+                <div class="preview">
+                    <img id="file-ip-1-preview" />
+                </div>
+
+                <h5>Most Recent Echocardiogram:</h5>
+
+                <label for="file-ip-2">Upload Image</label>
+                <input type="file" id="file-ip-2" accept="image/*" onchange="showPreview2(event);" />
+
+                <div class="preview2">
+                    <img id="file-ip-1-preview2" />
+                </div>
+
+                <button onclick="window.print()">Download Page!</button>
+            </form>
+            <input type="submit" value="Save" onClick="saveData()" />
+        </div>
+    </body>
+</html>
