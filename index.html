@@ -80,7 +80,7 @@ input { display: table-cell; }
 
     <body>
         <div class="container">
-            <form action="submit">
+            <form>
                 <h1 style="text-align: center;">My Pediatric Cardiology Patient Passport</h1>
       
                 <h3>Who I am:</h3>
@@ -235,6 +235,7 @@ input { display: table-cell; }
                         localStorage.setItem("mpc", mpc);
                         localStorage.setItem("mpp", mpp);
                         localStorage.setItem("mci", mci);
+                        alert('Info is locally saved for you! Please download your PDF');
                     }
                 </script>
                 <h3>Cardiac Testing</h3>
@@ -256,7 +257,7 @@ input { display: table-cell; }
 
                 <button onclick="window.print()">Download Page!</button>
             </form>
-            <input type="submit" value="Save" onClick="saveData()" />
+            <input type="button" value="Save" onClick="saveData()" />
         </div>
     </body>
 </html>
