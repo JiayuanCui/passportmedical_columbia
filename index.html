@@ -12,6 +12,7 @@
 .container input {
   width: 100%;
   clear: both;
+    align: center;
 }
         form  { display: table;      }
 p     { display: table-row;  }
@@ -19,6 +20,7 @@ label { display: table-cell; }
 input { display: table-cell; }
         * {
             box-sizing: border-box;
+            font: "Arial"
         }
 
         input[type="text"],
@@ -77,9 +79,10 @@ input { display: table-cell; }
     </style>
 
     <body>
-        <h1 style="text-align: center;">My Pediatric Cardiology Patient Passport</h1>
         <div class="container">
             <form action="submit">
+                <h1 style="text-align: center;">My Pediatric Cardiology Patient Passport</h1>
+      
                 <h3>Who I am:</h3>
                 <button onclick="window.print()">Download Page!</button>
                 <br />
