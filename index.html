@@ -4,6 +4,15 @@
     </head>
 
     <style>
+        .container {
+  width: 500px;
+  clear: both;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
+}
         form  { display: table;      }
 p     { display: table-row;  }
 label { display: table-cell; }
@@ -69,7 +78,7 @@ input { display: table-cell; }
 
     <body>
         <h1 style="text-align: center;">My Pediatric Cardiology Patient Passport</h1>
-        <div class="container-fluid">
+        <div class="container">
             <form action="submit">
                 <h3>Who I am:</h3>
                 <button onclick="window.print()">Download Page!</button>
