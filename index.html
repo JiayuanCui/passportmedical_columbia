@@ -196,7 +196,7 @@
                         mci = window.localStorage.getItem("mci", mci);
                         
 
-                document.getElementById("fname").value = JSON.strigify(window.localStorage.getItem("fname", fname));
+                document.getElementById("fname").value = (window.localStorage.getItem("fname", fname)).toString();
                 document.getElementById("dob").value = "2022-06-08";
                 document.getElementById("carDiag").value = "WOW";
                 document.getElementById("pastSur").value = pastSur;
