@@ -89,6 +89,8 @@
          <form>
             <h1 style="text-align: center;">My Pediatric Cardiology Patient Passport</h1>
             <button onclick="window.print()">Download My Medical Passport!</button>
+            <button id="c1" onclick="clear_function()">Clear All</button>
+           
             <input type="button" value="Save" onClick="saveData()" />
             <br />
             <h3>Who I am:</h3>
@@ -219,6 +221,26 @@
                 document.getElementById("mci").value=mci.toString();
                
                 };
+               
+               function clear_function()
+               {
+                var Val = confirm("Do you want delete all information on this device ?"); 
+                if( Val == true ){
+                   localStorage.clear();
+                  document.write (" Successfully Cleared!");
+                  return true;
+               }
+               else{
+                  document.write ("Try Again Later!");
+                  return false;
+               }
+            }  
+                
+               
+                   
+               
+               
+               
                
                function showPreview(event) {
                 if (event.target.files.length > 0) {
