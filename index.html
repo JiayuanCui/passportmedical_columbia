@@ -197,8 +197,8 @@
                         mci = window.localStorage.getItem("mci", mci);
                         
 
-                document.getElementById("fname").value=window.localStorage.getItem("fname", fname);
-                document.getElementById("dob").value=dob;
+                document.getElementById("fname").value=JSON.strigify(window.localStorage.getItem("fname", fname));
+                document.getElementById("dob").value="dob";
                 document.getElementById("carDiag").value=carDiag;
                 document.getElementById("pastSur").value=pastSur;
                document.getElementById("pastCat").value=pastCat;
