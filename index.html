@@ -196,6 +196,11 @@
                 <script>
                        window.onload = function() {
                       alert("Hi VIPUL!");
+                         if (typeof(Storage) !== "undefined") {
+                         alert( window.localStorage.getItem('fname'));
+                                  } else {
+                                    warning("We see that you either have cleared the data or using the application first time!"
+                                        } 
                         };
                     
                     function showPreview(event) {
