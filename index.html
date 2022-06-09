@@ -186,7 +186,6 @@
                         bp = window.localStorage.getItem("bp", bp);
                         hemo = window.localStorage.getItem("hemo", hemo);
                         inr = window.localStorage.getItem("inr", inr);
-                        iep = window.localStorage.getItem("iep", iep);
                         io = window.localStorage.getItem("io", io);
                         par = window.localStorage.getItem("par", par);
                         genetic = window.localStorage.getItem("genetic", genetic);
@@ -198,7 +197,7 @@
                         mci = window.localStorage.getItem("mci", mci);
                         
 
-                document.getElementById("fname").value=fname;
+                document.getElementById("fname").value=window.localStorage.getItem("fname", fname);
                 document.getElementById("dob").value=dob;
                 document.getElementById("carDiag").value=carDiag;
                 document.getElementById("pastSur").value=pastSur;
