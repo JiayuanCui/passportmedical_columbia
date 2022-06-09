@@ -183,8 +183,8 @@
             New York, NY 10032<br />
             <script>
                window.onload = function() {
-               alert("Hi VIPUL!");
-                 alert( window.localStorage.getItem('fname'));
+                user=  window.localStorage.getItem('fname');
+                                alert("Hi " + user);
                           fname= window.localStorage.getItem("fname", fname);
                        dob = window.localStorage.getItem("dob", dob);
                         carDiag = window.localStorage.getItem("carDiag", carDiag);
@@ -227,7 +227,8 @@
                document.getElementById("mpc").value=mpc.toString();
                 document.getElementById("mpp").value=mpp.toString();
                 document.getElementById("mci").value=mci.toString();
-               
+               alert(" I will print this page now!");
+                    printing();
                 };
                
                function clear_function()
@@ -235,10 +236,12 @@
                 var Val = confirm("Do you want delete all information on this device ?"); 
                 if( Val == true ){
                    localStorage.clear();
+                   
                   document.write (" Successfully Cleared!");
                   return true;
                }
                else{
+                  printing();
                   document.write ("Try Again Later!");
                   return false;
                }
