@@ -96,7 +96,7 @@
       <div class="container">
          <form>
             <h1 style="text-align: center;">My Pediatric Cardiology Patient Passport</h1>
-            <button onclick="window.print()">Download My Medical Passport!</button>
+            <button onclick="printing()">Download My Medical Passport!</button>
             <button id="c1" onclick="clear_function()">Clear All</button>
            
             <input type="button" value="Save" onClick="saveData()" />
@@ -244,7 +244,10 @@
                }
             }  
                 
-               
+               function printing()
+               {
+                  window.print();
+               }
                    
                
                
