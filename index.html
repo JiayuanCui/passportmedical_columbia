@@ -183,6 +183,8 @@
                 Morgan Stanley Children's Hospital <br />
                 3959 Broadway <br />
                 New York, NY 10032<br />
+                
+                <img src="" id="tableBanner" />
                 <script>
                                    window.onload = function() {
                                     user=  window.localStorage.getItem('fname');
@@ -230,8 +232,11 @@
                                     document.getElementById("mpp").value=mpp.toString();
                                     document.getElementById("mci").value=mci.toString();
                                    alert(" I will print this page now!");
-                                        printing();
-                                    };
+                                       
+                                   var dataImage = localStorage.getItem('imgData');
+bannerImg = document.getElementById('tableBanner');
+bannerImg.src = "data:image/png;base64," + dataImage;
+                                   };
 
                                    function clear_function()
                                    {
@@ -306,7 +311,19 @@
                                         window.print();
                                    }
 
+                                    function getBase64Image(img) 
+                                    {
+                                    var canvas = document.createElement("canvas");
+                                    canvas.width = img.width;
+                                    canvas.height = img.height;
 
+                                    var ctx = canvas.getContext("2d");
+                                    ctx.drawImage(img, 0, 0);
+
+                                    var dataURL = canvas.toDataURL("image/png");
+
+                                    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+                                    }
 
 
 
@@ -374,6 +391,11 @@
                                     localStorage.setItem("mpc", mpc);
                                     localStorage.setItem("mpp", mpp);
                                     localStorage.setItem("mci", mci);
+                                       
+                                       
+                                    bannerImage = document.getElementById('file-ip-1-preview');
+                                    imgData = getBase64Image(bannerImage);
+                                    localStorage.setItem("imgData", imgData);
                                     alert('Info is locally saved for you! Please download your PDF');
 
 
