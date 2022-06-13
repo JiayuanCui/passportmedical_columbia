@@ -12,7 +12,7 @@
         }
         * {
             box-sizing: border-box;
-            font: "Lato";
+            font-family: "Lato";
         }
         input[type="text"],
         select,
@@ -277,36 +277,37 @@ bannerImg.src = "data:image/png;base64," + dataImage;
 
                                    function printing()
                                    {
-                                        const myTimeout = setTimeout("HI ", 500);
-                                        document.write ("Fname: ", fname);
-                                        document.write("Date of Birth: ", dob);
-                                        document.write("Cardiac Diagnosis: ", carDiag);
-                                        document.write("Past Surgeries: ", pastSur);
-                                        document.write("Past Catheterizations: ", pastCat);
-                                        document.write("Implanted Devices: ", impDev);
-                                       document.write("<br/>Baseline Vital Signs<br/>");
-                                        document.write("Oxygen Saturation: ", oxy);
-                                        document.write("Resting Heart Rate: ", resting);
-                                        document.write("Blood Pressure: ", bp);
-                                        document.write("<br/>Most Recent<br/>");
+                                         document.write(" <h1 style="text-align: center;">My Pediatric Cardiology Patient Passport</h1>");
+                                        document.write(“<br/><p>Fname: ", fname,"</p>");
+                                        document.write(“<br/><p>Date of Birth: ", dob,"</p>");
+                                        document.write(“<br/><p>Cardiac Diagnosis: ", carDiag,"</p>");
+                                        document.write(“<br/><p>Past Surgeries: ", pastSur,"</p>");
+                                        document.write(“<br/><p>Past Catheterizations: ", pastCat,"</p>");
+                                        document.write(“<br/><p>Implanted Devices: ", impDev,"</p>");
+                                        document.write(“<br/><p><br/>Baseline Vital Signs<br/>");
+                                        document.write(“<br/><p>Oxygen Saturation: ", oxy,"</p>");
+                                        document.write(“<br/><p>Resting Heart Rate: ", resting,"</p>");
+                                        document.write(“<br/><p>Blood Pressure: ", bp,"</p>");
+                                        document.write(“<br/><p><br/>Most Recent<br/>,"</p>");
                                       
-                                       document.write("Hemoglobin/Hematocrit: ", hemo);
-                                        document.write("Target INR (if no anticoagulants): ", inr);
-                                        document.write("Need for Infective Endocarditis Prophylaxis:", iep);
-                                        document.write("Need for Infective Endocaditis: ", io);
-                                        document.write("Physical Activity Restrictions: ", par);
-                                        document.write("Genetic Testing (Special Instructions):", genetic);
-                                        document.write("<br/>My Medical Histoiry<br/>");
+                                        document.write(“<br/><p>Hemoglobin/Hematocrit: ", hemo,"</p>");
+                                        document.write(“<br/><p>Target INR (if no anticoagulants): ", inr,"</p>");
+                                        document.write(“<br/><p>Need for Infective Endocaditis: ", io,"</p>");
+                                        document.write(“<br/><p>Physical Activity Restrictions: ", par,"</p>");
+                                        document.write(“<br/><p>Genetic Testing (Special Instructions):", genetic,"</p>");
+                                        document.write(“<br/><p><br/>My Medical Histoiry<br/>");
                                       
-                                       document.write("Other Major Medical Issues:", mmi);
-                                        document.write("Current Medications:", cm);
-                                        document.write("Allergies:", aller);
-                                          document.write("<br/>If you have any questions, please call:<br/>");
+                                        document.write(“<br/><p>Other Major Medical Issues:", mmi,"</p>");
+                                        document.write(“<br/><p>Current Medications:", cm,"</p>");
+                                        document.write(“<br/><p>Allergies:", aller,"</p>");
+                                        document.write(“<br/><p><br/>If you have any questions, please call:<br/>");
                                       
-                                       document.write("My Primary Pediatrician", mpc);
-                                        document.write("<br/>My Contact Information:<br/>");
-                                        document.write("My Guardian: ", mci);
-                                        window.print();
+                                        document.write(“<br/><p>My Primary Pediatrician", mpc,"</p>");
+                                        document.write(“<br/><p><br/>My Contact Information:<br/>);
+                                        document.write(“<br/><p>My Guardian: ", mci,"</p>");
+                                        
+                                        document.write("<img src="" id="tableBanner" />");
+                                      window.print();
                                    }
 
                                     function getBase64Image(img) 
