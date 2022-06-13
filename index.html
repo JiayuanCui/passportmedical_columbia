@@ -74,7 +74,7 @@
             height: 300px;
             borde: "solid 1px #CCC";
         }
-        #file-ip-1-preview {
+        #file-ip-1-preview,tableBanner,tableBanner2 {
             object-fit: "contain";
             width: 300px;
             height: 300px;
@@ -108,7 +108,7 @@
     <body>
         <div class="container">
             <form>
-                <h1 style="text-align: center; font-family: "Lato";">My Pediatric Cardiology Patient Passport</h1>
+                <h1 style="text-align: center; font-family: sans-serif;">My Pediatric Cardiology Patient Passport</h1>
                 <button onclick="printing()">Download My Medical Passport!</button>
                 <button id="c1" onclick="clear_function()">Clear All</button>
 
@@ -196,7 +196,9 @@
                 New York, NY 10032<br />
                 
                 <img src="" id="tableBanner" />
-                <script>
+                 <img src="" id="tableBanner2" />
+               
+		    <script>
                                    window.onload = function() {
                                     user=  window.localStorage.getItem('fname');
                                                     alert("Hi " + user);
@@ -245,6 +247,11 @@
                                    var dataImage = localStorage.getItem('imgData');
 bannerImg = document.getElementById('tableBanner');
 bannerImg.src = "data:image/png;base64," + dataImage;
+					   
+					   var dataImage2 = localStorage.getItem('imgData2');
+bannerImg2 = document.getElementById('tableBanner2');
+bannerImg2.src = "data:image/png;base64," + dataImage2;
+                                   };
                                    };
 
                                    function clear_function()
@@ -415,7 +422,11 @@ bannerImg.src = "data:image/png;base64," + dataImage;
                                     bannerImage = document.getElementById('file-ip-1-preview');
                                     imgData = getBase64Image(bannerImage);
                                     localStorage.setItem("imgData", imgData);
-                                    alert('Info is locally saved for you! Please download your PDF');
+                                    bannerImage2 = document.getElementById('file-ip-1-preview2');
+                                    imgData = getBase64Image(bannerImage2);
+                                    localStorage.setItem("imgData", imgData2);
+                                    
+					   alert('Info is locally saved for you! Please download your PDF');
 
 
 
