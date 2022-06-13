@@ -259,17 +259,22 @@ bannerImg.src = "data:image/png;base64," + dataImage;
 					        document.write("<h1>My Pediatric Cardiology Patient Passport</h1>");
                                              document.write("<h3><u>Who I Am:</u><h3/>");
                                                     
-					   document.write("<br/>Patient Name: ", fname);
-	                                        document.write("<br/>Date of Birth: ", dob);
-	                                 
+					   document.write("<p><b>Patient Name:</b> ", fname);
+					   document.write("</p><br>");
+	                                   document.write("<p><b>Date of Birth:</b>", dob);
+	                                   document.write("</p>");
 					   document.write("<h3><u>My Cardiac History:</u><h3/>");
-                                           document.write("<br/>Cardiac Diagnosis: ", carDiag);
-	                                   document.write("<br/>Past Surgeries: ", pastSur);
-	                                   document.write("<br/>Past Catheterizations: ", pastCat);
-	                                   document.write("<br/>Implanted Devices: ", impDev);
-					   document.write("<br/>(ICD, Pacemaker, Valve, etc.)");
+                                           document.write("<p><b>Cardiac Diagnosis: </b>", carDiag);
+					   document.write("</p><br>");
+	                                   document.write("<p><b>Past Surgeries:</b> ", pastSur);
+					   document.write("</p><br>");
+	                                   document.write("<p><b>Past Catheterizations: </b>", pastCat);
+					   document.write("</p><br>");
+	                                   document.write("<p><b>Implanted Devices:</b> ", impDev);
+					   document.write("</p><br>");
+					   document.write("(ICD, Pacemaker, Valve, etc.)");
 					        
-					   document.write("<br/>");
+					   document.write("<br>");
 	                                   document.write("<h3><u>Other Important Information:</u><h3/>");
  			                   document.write("<h4>Baseline Vital Signs:</h4>");
 	                                        document.write("<br/><li>Oxygen Saturation:", oxy); 
