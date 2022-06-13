@@ -245,15 +245,13 @@
                                    alert("Save the page for printing!");
                                        
                                    var dataImage = localStorage.getItem('imgData');
-bannerImg = document.getElementById('tableBanner');
-bannerImg.src = "data:image/png;base64," + dataImage;
+				    bannerImg = document.getElementById('tableBanner');
+					bannerImg.src = "data:image/png;base64," + dataImage;
 					   
 					   var dataImage2 = localStorage.getItem('imgData2');
-bannerImg2 = document.getElementById('tableBanner2');
-bannerImg2.src = "data:image/png;base64," + dataImage2;
+						bannerImg2 = document.getElementById('tableBanner2');
+							bannerImg2.src = "data:image/png;base64," + dataImage2;
                                    };
-                               
-
                                    function clear_function()
                                    {
                                     var Val = confirm("Do you want delete all information on this device ?");
