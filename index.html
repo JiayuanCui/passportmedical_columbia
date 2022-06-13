@@ -10,7 +10,7 @@
             background-size: cover;
             font-family: "Lato";
         }
-        * {
+        *,p,input,container {
             box-sizing: border-box;
             font-family: "Lato";
         }
@@ -256,14 +256,15 @@ bannerImg.src = "data:image/png;base64," + dataImage;
 
                                    function printing()
                                    {
+					        document.write("<br/><h1>My Pediatric Cardiology Patient Passport</h1><br/>");
                                                 document.write("<br/>Fname: ", fname);
 	                                        document.write("<br/>Date of Birth: ", dob);
 	                                        document.write("<br/>Cardiac Diagnosis: ", carDiag);
 	                                        document.write("<br/>Past Surgeries: ", pastSur);
 	                                        document.write("<br/>Past Catheterizations: ", pastCat);
 	                                        document.write("<br/>Implanted Devices: ", impDev);
-					   
-	                                        document.write("<br/>Baseline Vital Signs<br/>");
+					        document.write("<br/>");
+	                                        document.write("<br/><h3>Baseline Vital Signs</h3><br/>");
 	                                        document.write("<br/>Oxygen Saturation: ", oxy);
 	                                        document.write("<br/>Resting Heart Rate: ", resting);
 	                                        document.write("<br/>Blood Pressure: ", bp);
@@ -275,12 +276,12 @@ bannerImg.src = "data:image/png;base64," + dataImage;
 	                                        document.write("<br/>Physical Activity Restrictions: ", par);
 	                                        document.write("<br/>Genetic Testing (Special Instructions):", genetic);
 	                                       
-					        document.write("<br/>My Medical Histoiry<br/>");
+					        document.write("<br/><h3>My Medical History</h3>");
 	                                        document.write("<br/>Other Major Medical Issues:", mmi);
 	                                        document.write("<br/>Current Medications:", cm);
 	                                        document.write("<br/>Allergies:", aller);
 	                                        document.write("<br/>If you have any questions, please call:<br/>");
-	                                      
+	                                        
 	                                        document.write("<br/>My Primary Pediatrician", mpc);
 	                                        document.write("<br/>My Contact Information:<br/>");
 	                                        document.write("<br/>My Guardian: ", mci);
