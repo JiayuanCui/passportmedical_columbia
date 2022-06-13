@@ -256,39 +256,53 @@ bannerImg.src = "data:image/png;base64," + dataImage;
 
                                    function printing()
                                    {
-					        document.write("<br/><h1>My Pediatric Cardiology Patient Passport</h1><br/>");
-                                                document.write("<br/>Fname: ", fname);
+					        document.write("<h1>My Pediatric Cardiology Patient Passport</h1>");
+                                             document.write("<h3><u>Who I Am:</u><h3/>");
+                                                    
+					   document.write("<br/>Patient Name: ", fname);
 	                                        document.write("<br/>Date of Birth: ", dob);
-	                                        document.write("<br/>Cardiac Diagnosis: ", carDiag);
-	                                        document.write("<br/>Past Surgeries: ", pastSur);
-	                                        document.write("<br/>Past Catheterizations: ", pastCat);
-	                                        document.write("<br/>Implanted Devices: ", impDev);
-					        document.write("<br/>");
-	                                        document.write("<br/><h3>Baseline Vital Signs</h3><br/>");
-	                                        document.write("<br/>Oxygen Saturation: ", oxy);
-	                                        document.write("<br/>Resting Heart Rate: ", resting);
-	                                        document.write("<br/>Blood Pressure: ", bp);
-	                                        document.write("<br/>Most Recent<br/>");
+	                                 
+					   document.write("<h3><u>My Cardiac History:</u><h3/>");
+                                           document.write("<br/>Cardiac Diagnosis: ", carDiag);
+	                                   document.write("<br/>Past Surgeries: ", pastSur);
+	                                   document.write("<br/>Past Catheterizations: ", pastCat);
+	                                   document.write("<br/>Implanted Devices: ", impDev);
+					   document.write("<br/>(ICD, Pacemaker, Valve, etc.)
+					        
+					   document.write("<br/>");
+	                                   document.write("<h3><u>Other Important Information:</u><h3/>");
+ 			                   document.write("<h4>Baseline Vital Signs:</h4>");
+	                                        document.write("<br/><li>Oxygen Saturation:", oxy); 
+					        document.write("</li>");
+	                                        document.write("<br/><li>Resting Heart Rate: ", resting);
+					        document.write("</li>");
+	                                        document.write("<br/><li>Blood Pressure: ", bp);
+					        document.write("</li>");
+	                                        document.write("<h4>Most Recent</h4>");
 	                                      
 	                                        document.write("<br/>Hemoglobin/Hematocrit: ", hemo);
 	                                        document.write("<br/>Target INR (if no anticoagulants): ", inr);
-	                                        //document.write("<br/>Need for Infective Endocaditis: ", io);
+	                                        //document.write("<br/>Need for Infective Endocaditis Prophylaxis: ", io);
 	                                        document.write("<br/>Physical Activity Restrictions: ", par);
 	                                        document.write("<br/>Genetic Testing (Special Instructions):", genetic);
-	                                       
-					        document.write("<br/><h3>My Medical History</h3>");
-	                                        document.write("<br/>Other Major Medical Issues:", mmi);
+	                                        document.write("<h3><u>My Medical History:</u><h3/>");
+ 			                 	document.write("<br/>Other Major Medical Issues:", mmi);
 	                                        document.write("<br/>Current Medications:", cm);
 	                                        document.write("<br/>Allergies:", aller);
-	                                        document.write("<br/>If you have any questions, please call:<br/>");
+	                                        document.write("<h3><u>If you have any questions, please call:</u><h3>");
+	                                        document.write("<h3><u>Other Members of my Care Team:</u></h3>");
+	                                      
+	                                        document.write("<br/>My Primary Pediatrician:", mpc);
+	                                        document.write("<h3><u>My Contact Information:</u></h3>");
+	                                          
+					        document.write("<br/>My Guardian: ", mci);
 	                                        
-	                                        document.write("<br/>My Primary Pediatrician", mpc);
-	                                        document.write("<br/>My Contact Information:<br/>");
-	                                        document.write("<br/>My Guardian: ", mci);
-	                                        
-
+						document.write("<h4>Directive</h4>");
+					        document.write("<p>In case of emergency, if possible, please transport me to:<br/>Columbia University Medical Center<br/>Morgan Stanley Children's Hospital<br/>3959 Broadway<br/>New York, NY 10032</p>");
+	                                      
+	                                      
  
-                                        document.write("");
+                                                document.write("");
                                        
  
                                        
