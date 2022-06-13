@@ -8,11 +8,11 @@
             background: url(https://wallpaperstock.net/simple-blue-wallpapers_1363_1600x1200.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-            font-family: "Optima";
+            font-family: "Lato";
         }
         * {
             box-sizing: border-box;
-            font: "Arial";
+            font: "Lato";
         }
         input[type="text"],
         select,
@@ -262,7 +262,6 @@
                     document.write("mpp", mpp);
                     document.write("mci", mci);
                                     alert('Info is locally saved for yo');
-
                                        printing();
                                       return true;
                                    }
@@ -275,31 +274,36 @@
 
                                    function printing()
                                    {
-                                      const myTimeout = setTimeout("HI ", 5000);
-                                      document.write ("fname", fname);
-                    document.write("dob", dob);
-                    document.write("carDiag", carDiag);
-                    document.write("pastSur", pastSur);
-                    document.write("pastCat", pastCat);
-                    document.write("impDev", impDev);
-                    document.write("oxy", oxy);
-                    document.write("resting", resting);
-                    document.write("bp", bp);
-                    document.write("hemo", hemo);
-                    document.write("inr", inr);
-                    document.write("iep", iep);
-                    document.write("io", io);
-                    document.write("par", par);
-                    document.write("genetic", genetic);
-                    document.write("mmi", mmi);
-                    document.write("cm", cm);
-                    document.write("aller", aller);
-                    document.write("mpc", mpc);
-                    document.write("mpp", mpp);
-                    document.write("mci", mci);
-                                  
-
-                                      window.print();
+                                        const myTimeout = setTimeout("HI ", 500);
+                                        document.write ("Fname: ", fname);
+                                        document.write("Date of Birth: ", dob);
+                                        document.write("Cardiac Diagnosis: ", carDiag);
+                                        document.write("Past Surgeries: ", pastSur);
+                                        document.write("Past Catheterizations: ", pastCat);
+                                        document.write("Implanted Devices: ", impDev);
+                                       document.write("<br/>Baseline Vital Signs<br/>");
+                                        document.write("Oxygen Saturation: ", oxy);
+                                        document.write("Resting Heart Rate: ", resting);
+                                        document.write("Blood Pressure: ", bp);
+                                        document.write("<br/>Most Recent<br/>");
+                                      
+                                       document.write("Hemoglobin/Hematocrit: ", hemo);
+                                        document.write("Target INR (if no anticoagulants): ", inr);
+                                        document.write("Need for Infective Endocarditis Prophylaxis:", iep);
+                                        document.write("Need for Infective Endocaditis: ", io);
+                                        document.write("Physical Activity Restrictions: ", par);
+                                        document.write("Genetic Testing (Special Instructions):", genetic);
+                                        document.write("<br/>My Medical Histoiry<br/>");
+                                      
+                                       document.write("Other Major Medical Issues:", mmi);
+                                        document.write("Current Medications:", cm);
+                                        document.write("Allergies:", aller);
+                                          document.write("<br/>If you have any questions, please call:<br/>");
+                                      
+                                       document.write("My Primary Pediatrician", mpc);
+                                        document.write("<br/>My Contact Information:<br/>");
+                                        document.write("My Guardian: ", mci);
+                                        window.print();
                                    }
 
 
