@@ -27,7 +27,7 @@
 		
 	    }
        input[type="text"], select, textarea {
-    width: 75%;
+    width: auto;
     padding: 20px;
     border: 1px solid seagreen;
     border-radius: 53px;
@@ -49,12 +49,12 @@ input[type="button"] {
 }
       
 .container {
-    border-radius: 5px;
+  border-radius: 70px;
     background-color: rgba(60,60,60,0.1);
-    padding: 10px;
-    width: auto;
-    height: auto;
-    margin-left: auto;
+    padding: 126px;
+    width: fit-content;
+    height: fit-content;
+    margin-left: inherit;
     margin-right: auto;
     font-family: sans-serif;
 }
@@ -80,7 +80,7 @@ input[type="button"] {
        button {
 	       background-color: orange;
     color: white;
-    padding: 41px 20px;
+    padding: 15px 20px;
     border-radius: 59px;
     cursor: pointer;
     float: left;
@@ -88,9 +88,9 @@ input[type="button"] {
     font-size: large;
 	    }
       #c1 {
-   background-color: darkcyan;
+  background-color: darkcyan;
     color: white;
-    padding: 41px 20px;
+    padding: 16px 20px;
     border-radius: 64px;
     cursor: pointer;
     float: left;
@@ -100,7 +100,7 @@ input[type="button"] {
     <body>
         <div class="container">
             <form>
-                <h1 style="text-align: center; font-family: sans-serif;">My Pediatric Cardiology Patient Passport</h1>
+                <h1 style="font-family: sans-serif;">My Pediatric Cardiology Patient Passport</h1>
                 <button onclick="printing()">Download My Medical Passport!</button>
                 <button id="c1" onclick="clear_function()">Clear All Records</button>
 
