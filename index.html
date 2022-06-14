@@ -145,19 +145,19 @@ input[type="button"] {
                     <input type="text" id="resting" name="resting" />
                 </li>
                 <li>
-                    <label for="bp">Blood Pressure:</label>
+                    <label for="bp">Blood Pressure:</label><br/>
                     <input type="text" id="bp" name="bp" /><br />
                     <br />
-                    <label for="carDiag">Cardiac Diagnosis:</label>
+                    <label for="carDiag">Cardiac Diagnosis:</label><br/>
                     <input type="text" id="carDiag" name="carDiag" /><br />
                     <h4>Most Recent</h4>
                 </li>
                 <li>
-                    <label for="hemo">Hemoglobin/Hematocrit:</label>
+                    <label for="hemo">Hemoglobin/Hematocrit:</label><br/>
                     <input type="text" id="hemo" name="hemo" /><br />
                 </li>
                 <li>
-                    <label for="inr">Target INR (if on anticoagulants):</label>
+                    <label for="inr">Target INR (if on anticoagulants):</label><br/>
                     <input type="text" id="inr" name="inr" /><br />
                 </li>
                 <li>
@@ -195,7 +195,9 @@ input[type="button"] {
                 Morgan Stanley Children's Hospital <br />
                 3959 Broadway <br />
                 New York, NY 10032<br />
-                
+                <input type="button" value="Save" onClick="saveData()" />
+                <button onclick="printing()">Download My Medical Passport!</button>
+           
                 <img src="" id="tableBanner" />
 		    <br/>
                  <img src="" id="tableBanner2" />
@@ -451,9 +453,7 @@ input[type="button"] {
                 <div class="preview2">
                     <img id="file-ip-1-preview2" />
                 </div>
-                <input type="button" value="Save" onClick="saveData()" />
-                <button onclick="printing()">Download My Medical Passport!</button>
-            </form>
+                </form>
         </div>
     </body>
 </html>
