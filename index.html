@@ -15,7 +15,7 @@
             background-size: cover;
             font-family: "Lato";
         }
-        h1,h2,h3,h4,h5,p,input,container {
+        h1,h2,h3,h4,h5,p,container {
             box-sizing: auto;
             font-family: sans-serif;
         }
@@ -111,10 +111,10 @@ input[type="button"] {
             <form>
                 <h1 style="text-align: center; font-family: sans-serif;">My Pediatric Cardiology Patient Passport</h1>
                 <button onclick="printing()">Download My Medical Passport!</button>
-                <button id="c1" onclick="clear_function()">Clear All</button>
+                <button id="c1" onclick="clear_function()">Clear All Records</button>
 
-                <input type="button" value="Save" onClick="saveData()" />
-                <br />
+                <input type="button" value="Save / Update" onClick="saveData()" />
+                <br /><br />
                 <h3>Who I am:</h3>
                 <br />
                 <label for="fname">Patient Name:</label><br />
