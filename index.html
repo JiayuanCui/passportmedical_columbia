@@ -274,11 +274,13 @@ input[type="button"] {
 			       //Calculates age from given Birth Date in the form//
        function _calcAge(birthDate, givenDate) {
          years = (givenDate.getFullYear() - birthDate.getFullYear());
-
-            years=years+1;
+        var dob2 = new Date(document.getElementById('dob').value);
+        var y = dob2.getFullYear();
+            var today=new Date().getFullYear();
+	       return (today-y);
         
 
-        return years;
+  
     }
 			    
 			    
