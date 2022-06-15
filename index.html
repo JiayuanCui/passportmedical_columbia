@@ -112,11 +112,7 @@ input[type="button"] {
                 <input type="text" id="fname" name="fname" required /><br />
                 <label for="dob">Date of Birth:</label><br />
                 <input style="font-size: xxx-large;font-family: sans-serif;" type="date" id="dob" name="dob" />
-                <label for="age">Age:</label><br />
-               
-		    <input type="text" id="age" name="age" readonly/><br />
-                
-		<h3>My Cardiac History:</h3>
+               <h3>My Cardiac History:</h3>
                 <label for="carDiag">Cardiac Diagnosis:</label><br />
                 <input type="text" id="carDiag" name="carDiag" /><br />
                 <label for="pastSur">Past Surgeries:</label><br />
@@ -223,7 +219,7 @@ input[type="button"] {
                                             mci = window.localStorage.getItem("mci", mci);
 
 					    
-					    document.getElementById("age").value = _calcAge()
+					   
                                     document.getElementById("fname").value = (window.localStorage.getItem("fname", fname)).toString();
                                     document.getElementById("dob").value = dob.toString();
                                     document.getElementById("carDiag").value = carDiag.toString();
@@ -272,18 +268,7 @@ input[type="button"] {
                                 }
 
 			       //Calculates age from given Birth Date in the form//
-       function _calcAge() {
-        var dob2 = document.getElementById('dob');
-        var y = dob2.getFullYear();
-            var today=new Date().getFullYear();
-	       console.log(parseInt(today-y));
-	       console.log(parseInt(y));
-	       console.log(parseInt(today));
-	       return parseInt(today-y);
-        
-
   
-    }
 			    
 			    
 			    
