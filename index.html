@@ -111,8 +111,10 @@ input[type="button"] {
                 <label for="fname">Patient Name:</label><br />
                 <input type="text" id="fname" name="fname" required /><br />
                 <label for="dob">Date of Birth:</label><br />
-                <input type="date" id="dob" name="dob" />
-                <h3>My Cardiac History:</h3>
+                <input style="font-size: xxx-large;font-family: sans-serif;" type="date" id="dob" name="dob" />
+                <input type="text" id="age" name="age" readonly/><br />
+                
+		<h3>My Cardiac History:</h3>
                 <label for="carDiag">Cardiac Diagnosis:</label><br />
                 <input type="text" id="carDiag" name="carDiag" /><br />
                 <label for="pastSur">Past Surgeries:</label><br />
@@ -218,7 +220,8 @@ input[type="button"] {
                                             mpp = window.localStorage.getItem("mpp", mpp);
                                             mci = window.localStorage.getItem("mci", mci);
 
-
+					    today = new Date()
+					    document.getElementById("age").value = _calcAge(today,dob)
                                     document.getElementById("fname").value = (window.localStorage.getItem("fname", fname)).toString();
                                     document.getElementById("dob").value = dob.toString();
                                     document.getElementById("carDiag").value = carDiag.toString();
@@ -266,6 +269,23 @@ input[type="button"] {
                                    }
                                 }
 
+			       //Calculates age from given Birth Date in the form//
+       function _calcAge(birthDate, givenDate) {
+        givenDate = new Date(today);
+        var dt1 = document.getElementById('date').value;
+        var birthDate = new Date(dt1);
+        var years = (givenDate.getFullYear() - birthDate.getFullYear());
+
+        if (givenDate.getMonth() < birthDate.getMonth() ||givenDate.getMonth() == birthDate.getMonth() && givenDate.getDate() < birthDate.getDate()) {
+            years--;
+        }
+
+        return years;
+    }
+			    
+			    
+			    
+			    
                                    function printing()
                                    {
 					   //document.write("<style>body { background: url("https://media.istockphoto.com/vectors/profile-verification-check-marks-icons-vector-illustration-vector-id1313547780?k=20&m=1313547780&s=612x612&w=0&h=dpYT_kesPq9p3wHVyXTXdMy71_o-YczCkG0zMrsNfiA="; background-repeat: no-repeat; background-size: cover; font-family: "Lato" ;} </style> ");
