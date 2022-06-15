@@ -276,7 +276,8 @@ input[type="button"] {
         var dob2 = new Date(document.getElementById('dob').value);
         var y = dob2.getFullYear();
             var today=new Date().getFullYear();
-	       return (today-y);
+	       console.log(parseInt(today-y));
+	       return parseInt(today-y);
         
 
   
