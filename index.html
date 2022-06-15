@@ -222,8 +222,8 @@ input[type="button"] {
                                             mpp = window.localStorage.getItem("mpp", mpp);
                                             mci = window.localStorage.getItem("mci", mci);
 
-					    today = new Date()
-					    document.getElementById("age").value = _calcAge(today,dob)
+					    
+					    document.getElementById("age").value = _calcAge()
                                     document.getElementById("fname").value = (window.localStorage.getItem("fname", fname)).toString();
                                     document.getElementById("dob").value = dob.toString();
                                     document.getElementById("carDiag").value = carDiag.toString();
@@ -272,8 +272,7 @@ input[type="button"] {
                                 }
 
 			       //Calculates age from given Birth Date in the form//
-       function _calcAge(birthDate, givenDate) {
-         years = (givenDate.getFullYear() - birthDate.getFullYear());
+       function _calcAge() {
         var dob2 = new Date(document.getElementById('dob').value);
         var y = dob2.getFullYear();
             var today=new Date().getFullYear();
