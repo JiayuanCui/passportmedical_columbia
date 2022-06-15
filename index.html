@@ -112,7 +112,9 @@ input[type="button"] {
                 <input type="text" id="fname" name="fname" required /><br />
                 <label for="dob">Date of Birth:</label><br />
                 <input style="font-size: xxx-large;font-family: sans-serif;" type="date" id="dob" name="dob" />
-                <input type="text" id="age" name="age" readonly/><br />
+                <label for="age">Age:</label><br />
+               
+		    <input type="text" id="age" name="age" readonly/><br />
                 
 		<h3>My Cardiac History:</h3>
                 <label for="carDiag">Cardiac Diagnosis:</label><br />
@@ -271,14 +273,10 @@ input[type="button"] {
 
 			       //Calculates age from given Birth Date in the form//
        function _calcAge(birthDate, givenDate) {
-        givenDate = new Date(today);
-        var dt1 = document.getElementById('date').value;
-        var birthDate = new Date(dt1);
-        var years = (givenDate.getFullYear() - birthDate.getFullYear());
+         years = (givenDate.getFullYear() - birthDate.getFullYear());
 
-        if (givenDate.getMonth() < birthDate.getMonth() ||givenDate.getMonth() == birthDate.getMonth() && givenDate.getDate() < birthDate.getDate()) {
-            years--;
-        }
+            years=years+1;
+        
 
         return years;
     }
